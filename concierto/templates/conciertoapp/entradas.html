@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="container mt-5">
+    <div class="alert alert_info dspaly-1 text-center"> LISTA DE ENTRADAS</div>
+    {% if entradas %}
+    <table>
+        <thead>
+            <tr>
+                <th>Categoria</th>
+                <th>Descripcion</th>
+                <th>Numero_asiento</th>
+                <th>Precio</th>
+                <th>Sector</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ent in entradas %}
+            <tr>
+                <td>{{ ent.Categoria}}</td>
+                <td>{{ ent.Descripcion}}</td>
+                <td>{{ ent.Numero_asiento}}</td>
+                <td>{{ ent.Precio}}</td>
+                <td>{{ ent.Sector}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div>
+        <strong>No se encuentran las entradas</strong>
+    </div>
+
+    {% endif %}
+    <a href="../" class="btn btn-danger">VOLVER</a>
+    <a href="../agregarEntradas" class="btn btn_info float_end">Agregar Entradas</a>
+</body>
+</html>

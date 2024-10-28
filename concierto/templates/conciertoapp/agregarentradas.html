@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="container mt-5">
+    <div class="alert alert_info dspaly-1 text-center"> LISTA DE ENTRADAS</div>
+    <form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Agregar entradas" class="btn btn_info">
+    </form>
+
+
+
+
+    <a href="../entradas" class="btn btn_info mt-5">ENTRADAS</a>
+    
+</body>
+</html>
